@@ -3,174 +3,191 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CARLO DALI London | Add £5,000-£15,000 Monthly Profit</title>
+<title>CARLO DALI London | Add £5,000+ Monthly Profit</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#060607;--bg2:#0c0c10;--bg3:#111115;--gold:#c9a84c;--gold-d:#a38a3a;--gold-b:#dfc26a;--green:#22c55e;--green-d:#166534;--green-bg:rgba(34,197,94,.08);--ivory:#f0ebe0;--silk:#ccc7b8;--ash:#8a857a;--stone:#5a5650;--line:rgba(255,255,255,.07);--red:#ef4444}
+:root{--bg:#060607;--bg2:#0c0c10;--bg3:#111115;--gold:#c9a84c;--gold-d:#a38a3a;--gold-b:#dfc26a;--green:#22c55e;--green-bg:rgba(34,197,94,.08);--ivory:#f0ebe0;--silk:#ccc7b8;--ash:#8a857a;--stone:#5a5650;--line:rgba(255,255,255,.07);--red:#ef4444}
 html{scroll-behavior:smooth}
 body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--ivory);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400}
 
-.nav{position:sticky;top:0;z-index:90;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:rgba(6,6,7,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-.nav-brand{font-family:'Playfair Display',serif;font-size:16px;font-weight:500;letter-spacing:5px;color:var(--ivory)}
-.nav-cta{padding:8px 20px;background:var(--gold);color:var(--bg);font-size:10px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;font-family:inherit;font-weight:600;cursor:pointer;border:none}
-@media(min-width:768px){.nav{padding:16px 48px}}
+/* STICKY MOBILE CTA */
+.sticky-bar{display:block;position:fixed;bottom:0;left:0;right:0;z-index:99;padding:10px 16px;background:rgba(6,6,7,.96);backdrop-filter:blur(12px);border-top:1px solid var(--gold-d)}
+.sticky-bar a{display:block;width:100%;padding:14px;background:var(--gold);color:var(--bg);text-align:center;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;text-decoration:none;font-family:inherit}
+@media(min-width:768px){.sticky-bar{display:none}}
 
-/* HERO */
-.hero{position:relative;padding:80px 20px 56px;overflow:hidden}
+.nav{position:sticky;top:0;z-index:90;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:rgba(6,6,7,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav-brand{font-family:'Playfair Display',serif;font-size:15px;font-weight:500;letter-spacing:5px;color:var(--ivory)}
+.nav-cta{padding:8px 20px;background:var(--gold);color:var(--bg);font-size:10px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;font-family:inherit;font-weight:600;border:none;cursor:pointer}
+@media(min-width:768px){.nav{padding:14px 48px}}
+
+/* HERO WITH FORM ABOVE FOLD */
+.hero{position:relative;padding:60px 20px 40px;overflow:hidden}
 .hero-bg{position:absolute;inset:0}
-.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.25}
-.hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,var(--bg) 0%,rgba(6,6,7,.5) 30%,rgba(6,6,7,.8) 70%,var(--bg) 100%)}
-.hero-c{position:relative;z-index:2;max-width:680px}
-.hero-tag{display:inline-block;padding:5px 14px;background:var(--green-bg);border:1px solid rgba(34,197,94,.25);font-size:10px;letter-spacing:3px;color:var(--green);text-transform:uppercase;margin-bottom:20px;font-weight:500}
-.hero h1{font-size:clamp(28px,7vw,52px);line-height:1.1;margin-bottom:6px}
-.hero h1 .profit{color:var(--gold);font-style:italic}
-.hero h1 .thin{font-weight:400;color:var(--silk)}
-.hero-sub{font-size:clamp(18px,4vw,26px);color:var(--gold);margin-bottom:16px;font-family:'Playfair Display',serif;font-weight:400}
-.hero-p{font-size:15px;font-weight:300;color:var(--ash);line-height:1.7;max-width:480px;margin-bottom:28px}
-.hero-ctas{display:flex;gap:10px;flex-wrap:wrap}
-.btn-main{padding:14px 36px;background:var(--gold);color:var(--bg);font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;font-family:inherit;transition:all .2s}
-.btn-main:hover{background:var(--gold-b)}
-.btn-ghost{padding:14px 28px;border:1px solid var(--line);color:var(--ash);font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;font-family:inherit;transition:all .2s}
-.btn-ghost:hover{border-color:var(--gold-d);color:var(--gold)}
-@media(min-width:768px){.hero{padding:120px 48px 80px}}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.2}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(135deg,var(--bg) 0%,rgba(6,6,7,.6) 50%,var(--bg) 100%)}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr;gap:28px;max-width:1000px;margin:0 auto}
+.hero-left h1{font-size:clamp(26px,6vw,44px);line-height:1.1;margin-bottom:10px}
+.hero-left h1 .gold{color:var(--gold);font-style:italic}
+.hero-left h1 .thin{font-weight:400;color:var(--silk)}
+.hero-sub{font-size:15px;color:var(--gold);margin-bottom:10px;font-family:'Playfair Display',serif}
+.hero-p{font-size:14px;color:var(--ash);line-height:1.7;margin-bottom:16px;font-weight:300}
+.hero-proof{display:flex;gap:20px;flex-wrap:wrap}
+.hp{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--silk);font-weight:300}
+.hp .dot{width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0}
+
+/* HERO FORM */
+.hero-form{background:var(--bg2);border:1px solid var(--line);padding:24px 20px}
+.hf-title{font-size:16px;font-weight:600;color:var(--ivory);margin-bottom:4px}
+.hf-sub{font-size:12px;color:var(--ash);margin-bottom:4px;font-weight:300}
+.hf-urgency{font-size:11px;color:var(--red);margin-bottom:14px;font-weight:500}
+.hf-field{margin-bottom:10px}
+.hf-field label{display:block;font-size:9px;letter-spacing:2px;color:var(--stone);text-transform:uppercase;margin-bottom:3px}
+.hf-field input,.hf-field select{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--ivory);padding:12px;font-size:14px;font-family:inherit;font-weight:300;outline:0;border-radius:0;-webkit-appearance:none;transition:border-color .2s}
+.hf-field input:focus,.hf-field select:focus{border-color:var(--gold)}
+.hf-field input::placeholder{color:var(--stone)}
+.hf-field select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 5 5-5' stroke='%23c9a84c' fill='none' stroke-width='1'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center}
+.hf-field select option{background:var(--bg);color:var(--ivory)}
+.hf-btn{display:block;width:100%;padding:15px;background:var(--gold);color:var(--bg);font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;border:none;cursor:pointer;font-family:inherit;transition:all .2s;margin-top:4px}
+.hf-btn:hover{background:var(--gold-b)}
+.hf-btn.done{background:#166534;cursor:default;letter-spacing:4px}
+.hf-note{font-size:10px;color:var(--stone);text-align:center;margin-top:8px;font-weight:300}
+.hf-trust{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap}
+.hf-trust span{font-size:10px;color:var(--ash);display:flex;align-items:center;gap:4px;font-weight:300}
+.hf-trust .icon{color:var(--green);font-size:12px}
+@media(min-width:768px){.hero{padding:80px 48px 60px}.hero-grid{grid-template-columns:1fr 380px;gap:40px;align-items:center}}
 
 /* TRUST BAR */
-.trust{padding:20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2);text-align:center}
-.trust-label{font-size:9px;letter-spacing:5px;color:var(--stone);text-transform:uppercase;margin-bottom:14px}
-.trust-row{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
-.trust-row span{color:rgba(255,255,255,.5);letter-spacing:2px;font-weight:500}
-.t-vogue{font-family:'Playfair Display',serif;font-size:20px}
-.t-bazaar{font-family:'Playfair Display',serif;font-size:18px}
-.t-gq{font-size:22px;font-weight:700}
-.t-elle{font-size:16px;letter-spacing:8px;font-weight:600}
-.t-mc{font-size:14px;letter-spacing:1px;font-weight:300;text-transform:lowercase}
-.t-instyle{font-family:'Playfair Display',serif;font-size:17px;font-style:italic}
-@media(min-width:768px){.trust{padding:24px 48px}.trust-row{gap:40px}}
+.trust{padding:16px 20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2);text-align:center}
+.trust-label{font-size:8px;letter-spacing:5px;color:var(--stone);text-transform:uppercase;margin-bottom:10px}
+.trust-row{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}
+.trust-row span{color:rgba(255,255,255,.45);letter-spacing:2px;font-weight:500}
+.t-v{font-family:'Playfair Display',serif;font-size:17px}
+.t-b{font-family:'Playfair Display',serif;font-size:15px}
+.t-g{font-size:18px;font-weight:700}
+.t-e{font-size:14px;letter-spacing:7px;font-weight:600}
+.t-m{font-size:12px;letter-spacing:1px;font-weight:300;text-transform:lowercase}
+.t-i{font-family:'Playfair Display',serif;font-size:15px;font-style:italic}
+@media(min-width:768px){.trust{padding:20px 48px}.trust-row{gap:36px}}
+
+/* SECTION CTA */
+.sec-cta{text-align:center;padding:24px 20px;border-top:1px solid var(--line);background:var(--bg2)}
+.sec-cta a{display:inline-block;padding:14px 44px;background:var(--gold);color:var(--bg);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;text-decoration:none;font-family:inherit}
+.sec-cta p{font-size:11px;color:var(--stone);margin-top:8px;font-weight:300}
 
 /* SECTIONS */
-.s{padding:56px 20px;max-width:920px;margin:0 auto}
-.s-tag{font-size:10px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:8px}
-.s h2{font-size:clamp(24px,5vw,38px);line-height:1.15;margin-bottom:6px}
+.s{padding:48px 20px;max-width:900px;margin:0 auto}
+.s-tag{font-size:10px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:6px}
+.s h2{font-size:clamp(22px,5vw,34px);line-height:1.15;margin-bottom:6px}
 .s h2 i{color:var(--gold)}
-.s-rule{width:36px;height:2px;background:var(--gold);margin-bottom:14px}
-.s-p{font-size:14px;color:var(--ash);line-height:1.7;max-width:500px;margin-bottom:32px;font-weight:300}
-@media(min-width:768px){.s{padding:80px 48px}}
+.s-rule{width:32px;height:2px;background:var(--gold);margin-bottom:12px}
+.s-p{font-size:14px;color:var(--ash);line-height:1.7;max-width:480px;margin-bottom:28px;font-weight:300}
+@media(min-width:768px){.s{padding:64px 48px}}
 
-/* HOW IT WORKS - THE PROFIT MECHANISM */
-.steps{display:grid;gap:2px;counter-reset:step}
-.step{background:var(--bg2);padding:24px 20px;display:flex;gap:16px;align-items:flex-start;counter-increment:step;border-left:2px solid var(--line);transition:border-color .3s}
+/* STEPS */
+.steps{display:grid;gap:2px}
+.step{background:var(--bg2);padding:20px;display:flex;gap:14px;align-items:flex-start;border-left:2px solid var(--line);transition:border-color .3s}
 .step:hover{border-left-color:var(--gold)}
-.step-n{font-family:'Playfair Display',serif;font-size:32px;color:var(--gold);font-weight:500;line-height:1;flex-shrink:0;width:36px}
-.step-body h4{font-size:15px;font-weight:600;color:var(--ivory);margin-bottom:4px;font-family:'Plus Jakarta Sans',sans-serif}
-.step-body p{font-size:13px;color:var(--ash);line-height:1.6;font-weight:300}
+.step-n{font-family:'Playfair Display',serif;font-size:28px;color:var(--gold);font-weight:500;line-height:1;flex-shrink:0;width:30px}
+.step-body h4{font-size:14px;font-weight:600;color:var(--ivory);margin-bottom:3px;font-family:'Plus Jakarta Sans',sans-serif}
+.step-body p{font-size:12.5px;color:var(--ash);line-height:1.5;font-weight:300}
 
-/* PROFIT CALCULATOR */
-.calc{background:var(--bg3);border:1px solid var(--line);padding:28px 20px;margin-top:24px}
-.calc-title{font-size:14px;font-weight:600;color:var(--gold);margin-bottom:16px;text-transform:uppercase;letter-spacing:2px}
-.calc-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.calc-row:last-child{border-bottom:none}
+/* PROFIT BOX */
+.calc{background:var(--bg3);border:1px solid rgba(34,197,94,.15);padding:24px 20px;margin-top:20px}
+.calc-title{font-size:12px;font-weight:600;color:var(--green);margin-bottom:12px;text-transform:uppercase;letter-spacing:2px}
+.calc-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:13px}
+.calc-row:last-of-type{border-bottom:none}
 .calc-label{color:var(--ash);font-weight:300}
 .calc-val{color:var(--ivory);font-weight:600}
-.calc-val.gold{color:var(--gold);font-size:20px;font-family:'Playfair Display',serif}
-.calc-val.big{color:var(--green);font-size:24px;font-weight:700;font-family:'Playfair Display',serif}
-.calc-note{font-size:11px;color:var(--stone);margin-top:12px;font-weight:300;font-style:italic}
+.calc-big{color:var(--green);font-size:22px;font-weight:700;font-family:'Playfair Display',serif}
+.calc-note{font-size:10px;color:var(--stone);margin-top:10px;font-weight:300;font-style:italic}
 
 /* PACKAGES */
 .pkgs{display:grid;gap:2px}
-.pkg{background:var(--bg2);padding:28px 20px;border:1px solid var(--line);transition:border-color .3s;position:relative}
-.pkg:hover{border-color:rgba(201,168,76,.25)}
+.pkg{background:var(--bg2);padding:24px 20px;border:1px solid var(--line);position:relative}
 .pkg.ft{border-color:rgba(201,168,76,.4);background:var(--bg3)}
-.pkg.ft::before{content:'MOST POPULAR';position:absolute;top:0;left:0;right:0;background:var(--gold);color:var(--bg);text-align:center;font-size:9px;letter-spacing:3px;padding:4px;font-weight:600}
-.pkg.ft{padding-top:40px}
-.p-tag{font-size:9px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:6px;font-weight:500}
-.pkg h3{font-size:20px;margin-bottom:3px}
-.p-price{font-family:'Playfair Display',serif;font-size:30px;color:var(--gold);font-weight:500;margin-bottom:2px}
-.p-price small{font-size:12px;color:var(--stone);font-family:'Plus Jakarta Sans',sans-serif;font-weight:300}
-.p-discount{display:inline-block;padding:2px 10px;background:var(--green-bg);border:1px solid rgba(34,197,94,.2);color:var(--green);font-size:11px;font-weight:600;margin-bottom:10px;letter-spacing:1px}
-.p-desc{font-size:12.5px;color:var(--ash);line-height:1.6;margin-bottom:16px;font-weight:300}
-.p-list{list-style:none;margin-bottom:20px}
-.p-list li{font-size:12px;color:var(--silk);padding:7px 0;border-bottom:1px solid var(--line);font-weight:300;padding-left:16px;position:relative}
-.p-list li::before{content:'\2713';position:absolute;left:0;color:var(--green);font-size:10px;top:8px}
-.p-roi{background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.15);padding:12px;margin-bottom:16px}
-.p-roi p{font-size:12px;color:var(--green);line-height:1.5;font-weight:400}
-.p-roi strong{font-weight:700}
-.p-btn{display:block;width:100%;text-align:center;padding:14px;font-size:10px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;font-weight:600;cursor:pointer;font-family:inherit;border:1px solid var(--gold-d);color:var(--gold);background:0 0;transition:all .2s}
-.p-btn:hover,.pkg.ft .p-btn{background:var(--gold);color:var(--bg);border-color:var(--gold)}
+.pkg.ft::before{content:'MOST CHOSEN';position:absolute;top:0;left:0;right:0;background:var(--gold);color:var(--bg);text-align:center;font-size:9px;letter-spacing:3px;padding:4px;font-weight:600}
+.pkg.ft{padding-top:36px}
+.p-tag{font-size:9px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:4px;font-weight:500}
+.pkg h3{font-size:18px;margin-bottom:2px}
+.p-price{font-family:'Playfair Display',serif;font-size:28px;color:var(--gold);font-weight:500;margin-bottom:2px}
+.p-price small{font-size:11px;color:var(--stone);font-family:'Plus Jakarta Sans',sans-serif;font-weight:300}
+.p-disc{display:inline-block;padding:2px 8px;background:var(--green-bg);border:1px solid rgba(34,197,94,.2);color:var(--green);font-size:10px;font-weight:600;margin-bottom:8px}
+.p-desc{font-size:12px;color:var(--ash);line-height:1.5;margin-bottom:12px;font-weight:300}
+.p-list{list-style:none;margin-bottom:14px}
+.p-list li{font-size:11.5px;color:var(--silk);padding:6px 0;border-bottom:1px solid var(--line);font-weight:300;padding-left:14px;position:relative}
+.p-list li::before{content:'\2713';position:absolute;left:0;color:var(--green);font-size:9px;top:7px}
+.p-roi{background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.12);padding:10px;margin-bottom:12px}
+.p-roi p{font-size:11px;color:var(--green);line-height:1.4;font-weight:500}
+.p-btn{display:block;width:100%;text-align:center;padding:13px;font-size:10px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;font-weight:600;cursor:pointer;font-family:inherit;background:var(--gold);color:var(--bg);border:none;transition:all .2s}
+.p-btn:hover{background:var(--gold-b)}
 @media(min-width:768px){.pkgs{grid-template-columns:repeat(3,1fr)}}
 
 /* SCARCITY */
-.scar{padding:28px 20px;text-align:center;background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.scar-alert{display:inline-block;padding:4px 14px;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.2);color:var(--red);font-size:10px;letter-spacing:3px;text-transform:uppercase;font-weight:600;margin-bottom:10px}
-.scar p{font-size:14px;color:var(--ash);font-weight:300;line-height:1.7}
+.scar{padding:24px 20px;text-align:center;background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.scar-badge{display:inline-block;padding:3px 12px;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.2);color:var(--red);font-size:9px;letter-spacing:3px;text-transform:uppercase;font-weight:600;margin-bottom:8px}
+.scar p{font-size:13px;color:var(--ash);font-weight:300;line-height:1.6}
 .scar strong{color:var(--gold);font-weight:500}
-@media(min-width:768px){.scar{padding:36px 48px}}
 
 /* VIDEO */
-.vid-wrap{width:100%;aspect-ratio:16/9;background:var(--bg2);border:1px solid var(--line);overflow:hidden;margin-top:20px}
+.vid-wrap{width:100%;aspect-ratio:16/9;background:var(--bg2);border:1px solid var(--line);overflow:hidden;margin-top:16px}
 .vid-wrap video{width:100%;height:100%;object-fit:cover}
 
-/* FAQ */
-.faq{display:grid;gap:2px}
-.fq{background:var(--bg2);padding:20px;cursor:pointer;transition:all .2s}
-.fq:hover{background:var(--bg3)}
-.fq-q{font-size:14px;font-weight:600;color:var(--ivory);display:flex;justify-content:space-between;align-items:center;gap:12px}
-.fq-q::after{content:'+';color:var(--gold);font-size:20px;font-weight:300;flex-shrink:0;transition:transform .2s}
-.fq.open .fq-q::after{transform:rotate(45deg)}
-.fq-a{max-height:0;overflow:hidden;transition:max-height .3s;font-size:13px;color:var(--ash);line-height:1.6;font-weight:300}
-.fq.open .fq-a{max-height:200px;padding-top:10px}
-
-/* FORM */
-.form-sec{padding:56px 20px;background:var(--bg2)}
-.form-w{max-width:560px;margin:0 auto}
-.form-sec h2{text-align:center;font-size:clamp(24px,5vw,36px);margin-bottom:4px}
-.form-sec h2 i{color:var(--gold)}
-.form-sub{text-align:center;font-size:14px;color:var(--ash);margin-bottom:8px;font-weight:300}
-.form-urgency{text-align:center;font-size:12px;color:var(--red);margin-bottom:28px;font-weight:500}
-.fg{display:grid;grid-template-columns:1fr;gap:12px}
-.fg label{display:block;font-size:9px;letter-spacing:2.5px;color:var(--stone);text-transform:uppercase;margin-bottom:4px}
-.fg input,.fg select,.fg textarea{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--ivory);padding:13px;font-size:14px;font-family:inherit;font-weight:300;outline:0;transition:border-color .2s;border-radius:0;-webkit-appearance:none}
-.fg input::placeholder,.fg textarea::placeholder{color:var(--stone)}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold)}
-.fg select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 5 5-5' stroke='%23c9a84c' fill='none' stroke-width='1'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
-.fg select option{background:var(--bg);color:var(--ivory)}
-.fg textarea{resize:vertical;min-height:70px}
-.f-btn{display:block;width:100%;padding:16px;background:var(--gold);color:var(--bg);font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;border:none;cursor:pointer;font-family:inherit;transition:all .2s;margin-top:4px}
-.f-btn:hover{background:var(--gold-b)}
-.f-btn.done{background:var(--green-d);cursor:default;letter-spacing:4px}
-.f-note{text-align:center;margin-top:10px;font-size:10px;color:var(--stone);font-weight:300}
-@media(min-width:640px){.fg{grid-template-columns:1fr 1fr}.fg-full{grid-column:1/-1}}
-@media(min-width:768px){.form-sec{padding:80px 48px}}
-
-.foot{padding:36px 20px;text-align:center;border-top:1px solid var(--line)}
-.foot-logo{font-family:'Playfair Display',serif;font-size:16px;letter-spacing:6px;color:var(--ivory);margin-bottom:4px}
-.foot-cities{font-size:9px;color:var(--stone);letter-spacing:2px;margin-bottom:12px}
-.foot-links{display:flex;justify-content:center;gap:16px;margin-bottom:12px}
+.foot{padding:32px 20px 80px;text-align:center;border-top:1px solid var(--line)}
+.foot-logo{font-family:'Playfair Display',serif;font-size:15px;letter-spacing:6px;color:var(--ivory);margin-bottom:4px}
+.foot-cities{font-size:9px;color:var(--stone);letter-spacing:2px;margin-bottom:10px}
+.foot-links{display:flex;justify-content:center;gap:14px;margin-bottom:10px}
 .foot-links a{font-size:10px;color:var(--gold-d);letter-spacing:1px;text-decoration:none}
-.foot-copy{font-size:9px;color:var(--stone)}
+.foot-copy{font-size:8px;color:var(--stone)}
+@media(min-width:768px){.foot{padding:36px 20px}}
 </style>
 </head>
 <body>
 
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-bar"><a href="#top-form">Book Your Free Call Now</a></div>
+
 <nav class="nav">
   <span class="nav-brand">CARLO DALI</span>
-  <a href="#book" class="nav-cta">Book a Call</a>
+  <a href="#top-form" class="nav-cta">Book a Call</a>
 </nav>
 
-<!-- HERO: PROFIT, NOT PARTNERSHIP -->
+<!-- HERO: HEADLINE LEFT + FORM RIGHT (ABOVE FOLD) -->
 <section class="hero">
   <div class="hero-bg"><img src="cd_watches.png" alt="CARLO DALI"></div>
   <div class="hero-ov"></div>
-  <div class="hero-c">
-    <div class="hero-tag">For Boutiques, Hotels, Salons &amp; Retailers</div>
-    <h1><span class="thin">Add</span> <span class="profit">£5,000 to £15,000</span><br><span class="thin">Monthly Profit to Your Business</span></h1>
-    <p class="hero-sub">With zero extra staff, zero training, and under 30 seconds per customer.</p>
-    <p class="hero-p">CARLO DALI London places its top 20 bestselling luxury fragrances in your store with a proven sales mechanism that generates daily profit on autopilot.</p>
-    <div class="hero-ctas">
-      <a href="#book" class="btn-main">Book a Video Call</a>
-      <a href="#how" class="btn-ghost">See How It Works</a>
+  <div class="hero-grid">
+    <div class="hero-left">
+      <h1><span class="thin">Add</span> <span class="gold">£5,000 to £15,000</span><br><span class="thin">Monthly Profit</span><br><span class="thin">to Your Business</span></h1>
+      <p class="hero-sub">Zero extra staff. Zero training. Under 30 seconds per customer.</p>
+      <p class="hero-p">CARLO DALI London installs a proven luxury fragrance display in your store. Your staff sprays visitors. 3-10 daily sales happen automatically.</p>
+      <div class="hero-proof">
+        <span class="hp"><span class="dot"></span>87+ Luxury Fragrances</span>
+        <span class="hp"><span class="dot"></span>5-Star Hotel Placements</span>
+        <span class="hp"><span class="dot"></span>15+ Countries</span>
+      </div>
+    </div>
+
+    <!-- FORM: 4 FIELDS ONLY - ABOVE THE FOLD -->
+    <div class="hero-form" id="top-form">
+      <div class="hf-title">Book Your Discovery Call</div>
+      <div class="hf-sub">See the products live. Get your profit projection.</div>
+      <div class="hf-urgency">Only 12 Perfume Bar units remaining</div>
+      <div class="hf-field"><label>Your Name</label><input type="text" placeholder="Full name"></div>
+      <div class="hf-field"><label>Business Name</label><input type="text" placeholder="Store or company"></div>
+      <div class="hf-field"><label>Phone / WhatsApp</label><input type="tel" placeholder="+44 ..."></div>
+      <div class="hf-field"><label>Business Type</label>
+        <select><option value="" disabled selected>Select</option><option>Boutique / Fashion</option><option>Hotel / Resort</option><option>Salon / Barber</option><option>Spa / Beauty</option><option>Concept Store</option><option>Other</option></select>
+      </div>
+      <button class="hf-btn" id="sb1" onclick="submitForm(this)">Book My Call</button>
+      <p class="hf-note">Free. No obligation. We respond within 24 hours.</p>
+      <div class="hf-trust">
+        <span><span class="icon">&#x2713;</span> No commitment required</span>
+        <span><span class="icon">&#x2713;</span> Confidential</span>
+        <span><span class="icon">&#x2713;</span> 10-minute video call</span>
+      </div>
     </div>
   </div>
 </section>
@@ -179,209 +196,131 @@ h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400}
 <div class="trust">
   <div class="trust-label">As Seen In</div>
   <div class="trust-row">
-    <span class="t-vogue">VOGUE</span>
-    <span class="t-bazaar">BAZAAR</span>
-    <span class="t-gq">GQ</span>
-    <span class="t-elle">E L L E</span>
-    <span class="t-mc">marie claire</span>
-    <span class="t-instyle"><em>InStyle</em></span>
+    <span class="t-v">VOGUE</span>
+    <span class="t-b">BAZAAR</span>
+    <span class="t-g">GQ</span>
+    <span class="t-e">E L L E</span>
+    <span class="t-m">marie claire</span>
+    <span class="t-i"><em>InStyle</em></span>
   </div>
 </div>
 
-<!-- HOW MONEY HAPPENS DAILY -->
+<!-- HOW MONEY HAPPENS -->
 <section class="s" id="how">
   <div class="s-tag">The Sales Mechanism</div>
   <h2>How <i>Money Happens</i> Daily</h2>
   <div class="s-rule"></div>
-  <p class="s-p">No special skills needed. No perfume experience required. Your staff follows one simple step, and sales happen automatically.</p>
-
+  <p class="s-p">No perfume experience needed. One simple step turns your foot traffic into daily fragrance sales.</p>
   <div class="steps">
-    <div class="step"><div class="step-n">1</div><div class="step-body"><h4>We Install the CARLO DALI Perfume Display</h4><p>We place our iconic display with the 20 bestselling fragrances in your store. Designed for compact spaces, near checkout or entrance.</p></div></div>
-    <div class="step"><div class="step-n">2</div><div class="step-body"><h4>Your Staff Sprays 2-3 Fragrances on Visitors</h4><p>It takes 30 seconds. No sales pitch needed. The fragrances sell themselves. Every visitor who tries one becomes a potential buyer.</p></div></div>
-    <div class="step"><div class="step-n">3</div><div class="step-body"><h4>3 to 10 Sales Per Day, Automatically</h4><p>With normal foot traffic of 30-50 visitors per day, partners average 3 to 10 fragrance sales daily. The scent does the selling.</p></div></div>
-    <div class="step"><div class="step-n">4</div><div class="step-body"><h4>£120 to £900 Daily Profit, Every Single Day</h4><p>Even at the conservative end: 3 sales/day at £40 profit each = £120/day. At 10 sales/day with Exclusive Collection: £900/day.</p></div></div>
+    <div class="step"><div class="step-n">1</div><div class="step-body"><h4>We Install the CARLO DALI Perfume Display</h4><p>20 bestselling fragrances placed in your store. Compact display designed for premium spaces.</p></div></div>
+    <div class="step"><div class="step-n">2</div><div class="step-body"><h4>Staff Sprays 2-3 Fragrances on Visitors</h4><p>Takes 30 seconds. No sales pitch. The scent does the selling.</p></div></div>
+    <div class="step"><div class="step-n">3</div><div class="step-body"><h4>3 to 10 Sales Per Day, Automatically</h4><p>With 30-50 daily visitors, partners average 3-10 fragrance sales daily.</p></div></div>
   </div>
-
-  <!-- PROFIT CALCULATOR -->
   <div class="calc">
-    <div class="calc-title">Conservative Profit Calculation</div>
-    <div class="calc-row"><span class="calc-label">Average daily sales</span><span class="calc-val">5 fragrances</span></div>
-    <div class="calc-row"><span class="calc-label">Average profit per sale</span><span class="calc-val">£40 (Prive) to £90 (Exclusive)</span></div>
-    <div class="calc-row"><span class="calc-label">Conservative daily profit</span><span class="calc-val gold">£200 / day</span></div>
-    <div class="calc-row"><span class="calc-label">Working days per month</span><span class="calc-val">25 days</span></div>
-    <div class="calc-row"><span class="calc-label">Monthly profit</span><span class="calc-val big">£5,000+</span></div>
-    <p class="calc-note">Based on partners with 30-50 daily visitors. High-traffic locations see £10,000-£20,000+/month.</p>
+    <div class="calc-title">Your Monthly Profit</div>
+    <div class="calc-row"><span class="calc-label">Conservative daily sales</span><span class="calc-val">5 fragrances</span></div>
+    <div class="calc-row"><span class="calc-label">Average profit per sale</span><span class="calc-val">£40 - £90</span></div>
+    <div class="calc-row"><span class="calc-label">Daily profit</span><span class="calc-val" style="color:var(--gold)">£200+</span></div>
+    <div class="calc-row"><span class="calc-label">Monthly profit (25 days)</span><span class="calc-big">£5,000+</span></div>
+    <p class="calc-note">High-traffic locations: £10,000 - £20,000+/month</p>
   </div>
 </section>
 
-<!-- BRAND VIDEO -->
+<!-- CTA AFTER MECHANISM -->
+<div class="sec-cta">
+  <a href="#top-form">Book Your Free Discovery Call</a>
+  <p>See the products live on video. Get your personalized profit projection.</p>
+</div>
+
+<!-- VIDEO -->
 <section class="s">
   <div class="s-tag">The Brand</div>
-  <h2>Experience <i>Carlo Dali</i> London</h2>
+  <h2>87+ Luxury Niche <i>Fragrances</i></h2>
   <div class="s-rule"></div>
-  <p class="s-p">87+ luxury niche fragrances. Premium watches. Signature bags. Sunglasses. Amenities. Already placed in 5-star hotels and elite venues worldwide.</p>
+  <p class="s-p">Already placed in 5-star hotels, elite boutiques, and premium venues worldwide. Featured in Vogue, GQ, Elle, and Bazaar.</p>
   <div class="vid-wrap">
-    <video controls preload="metadata">
-      <source src="video.mp4" type="video/mp4">
-    </video>
+    <video controls preload="metadata"><source src="video.mp4" type="video/mp4"></video>
   </div>
 </section>
 
 <!-- PACKAGES -->
 <section class="s" id="packages">
   <div class="s-tag">Investment Options</div>
-  <h2>Start <i>Generating Profit</i> This Month</h2>
+  <h2>Start <i>This Month</i></h2>
   <div class="s-rule"></div>
-  <p class="s-p">Three entry levels. All include the 20 bestselling fragrances that generate the fastest repeat purchases.</p>
-
   <div class="pkgs">
     <div class="pkg">
-      <div class="p-tag">Entry Level</div>
+      <div class="p-tag">Entry</div>
       <h3>Rookies Start</h3>
-      <div class="p-price">£1,500 <small>deposit</small></div>
-      <div class="p-desc">Get started fast. 20 bestsellers, all testers included. Prove the concept in your store within weeks.</div>
+      <div class="p-price">£1,500<small> deposit</small></div>
+      <p class="p-desc">20 bestsellers + all testers. Start selling within days.</p>
       <ul class="p-list">
-        <li>4 Exclusive fragrances (£180 retail each)</li>
-        <li>16 Prive fragrances (£80 retail each)</li>
-        <li>Free testers for every fragrance</li>
-        <li>Retail value: £2,000+</li>
-        <li>Optional display stand (+£200)</li>
+        <li>4 Exclusive (£180 retail each)</li>
+        <li>16 Prive (£80 retail each)</li>
+        <li>Free testers included</li>
         <li>Wholesale account activated</li>
       </ul>
-      <div class="p-roi"><p>At 3 sales/day: <strong>investment recovered in under 2 weeks</strong></p></div>
-      <a href="#book" class="p-btn">Book a Call</a>
+      <div class="p-roi"><p>ROI: Investment recovered in under 2 weeks</p></div>
+      <a href="#top-form" class="p-btn">Book a Call</a>
     </div>
-
     <div class="pkg ft">
       <div class="p-tag">Recommended</div>
       <h3>Perfume Bar</h3>
-      <div class="p-price">£8,000 <small>investment</small></div>
-      <div class="p-discount">60% Wholesale Discount</div>
-      <div class="p-desc">The signature CARLO DALI in-store experience. Perfume Bar display + full bestseller range. What most partners choose.</div>
+      <div class="p-price">£8,000<small> investment</small></div>
+      <div class="p-disc">60% Wholesale Discount</div>
+      <p class="p-desc">Full display + 20 bestsellers x 10 units each. £20,000 retail value.</p>
       <ul class="p-list">
-        <li>10 units of each fragrance (20 fragrances)</li>
-        <li>Retail value: £20,000</li>
-        <li>1 Iconic Perfume Bar Display</li>
-        <li>Free testers for all fragrances</li>
-        <li>Staff training &amp; visual merchandising</li>
-        <li>Co-branded marketing support</li>
+        <li>Iconic Perfume Bar Display</li>
+        <li>10 units of each fragrance</li>
+        <li>All testers + merchandising kit</li>
+        <li>Staff training included</li>
         <li>Territory consideration</li>
       </ul>
-      <div class="p-roi"><p>At 5 sales/day: <strong>£5,000/month profit. Investment recovered in under 2 months</strong></p></div>
-      <a href="#book" class="p-btn">Book a Call</a>
+      <div class="p-roi"><p>ROI: £5,000+/month profit. Recovered in under 2 months</p></div>
+      <a href="#top-form" class="p-btn">Book a Call</a>
     </div>
-
     <div class="pkg">
       <div class="p-tag">Premium</div>
       <h3>Flagship Partner</h3>
-      <div class="p-price">£30,000 <small>investment</small></div>
-      <div class="p-discount">70% Wholesale Discount</div>
-      <div class="p-desc">Maximum margins. Full product universe. Exclusive territory. For serious retailers who want to scale fast.</div>
+      <div class="p-price">£30,000<small> investment</small></div>
+      <div class="p-disc">70% Wholesale Discount</div>
+      <p class="p-desc">Maximum margins. Full product universe. Territory exclusivity.</p>
       <ul class="p-list">
-        <li>50 units each OR £100K retail free choice</li>
+        <li>50 units each OR £100K retail</li>
         <li>2 Perfume Bar Displays</li>
-        <li>Guaranteed territory exclusivity</li>
-        <li>Dedicated brand ambassador</li>
-        <li>National marketing campaign support</li>
-        <li>Access to full product universe (watches, bags, sunglasses)</li>
-        <li>Quarterly business reviews</li>
-        <li>First access to new collections</li>
+        <li>Guaranteed exclusive territory</li>
+        <li>Full product access</li>
       </ul>
-      <div class="p-roi"><p>At 10 sales/day: <strong>£10,000-£20,000/month profit. 70% margins on all future orders</strong></p></div>
-      <a href="#book" class="p-btn">Book a Call</a>
+      <div class="p-roi"><p>ROI: £10,000-£20,000/month. 70% margins on all orders</p></div>
+      <a href="#top-form" class="p-btn">Book a Call</a>
     </div>
   </div>
 </section>
 
-<!-- SCARCITY -->
+<!-- SCARCITY + FINAL CTA -->
 <div class="scar">
-  <div class="scar-alert">Limited Availability</div>
-  <p>Only <strong>12 Perfume Bar units</strong> available from the current production batch.<br>
-  We protect <strong>territory exclusivity</strong> per region. Partners secure their area with a deposit today.</p>
+  <div class="scar-badge">Limited Availability</div>
+  <p>Only <strong>12 Perfume Bar units</strong> from current production batch.<br><strong>Territory exclusivity</strong> secured on first-come basis.</p>
 </div>
 
-<!-- FAQ - REAL OBJECTIONS FROM HIS SCRIPT -->
-<section class="s">
-  <div class="s-tag">Common Questions</div>
-  <h2>Before You <i>Decide</i></h2>
-  <div class="s-rule"></div>
-
-  <div class="faq">
-    <div class="fq" onclick="this.classList.toggle('open')">
-      <div class="fq-q">"£8,000 is a big investment."</div>
-      <div class="fq-a">Most partners start with one Perfume Bar to test the concept. With normal traffic, the investment is typically recovered within months. This is not a cost. It is inventory that generates money immediately.</div>
-    </div>
-    <div class="fq" onclick="this.classList.toggle('open')">
-      <div class="fq-q">"I don't know the CARLO DALI brand."</div>
-      <div class="fq-a">That is exactly why we do not ask you to carry 87 perfumes. We install only the 20 bestsellers, the proven fast movers that perform across all partner locations. The fragrances sell themselves when customers try them on skin.</div>
-    </div>
-    <div class="fq" onclick="this.classList.toggle('open')">
-      <div class="fq-q">"Will it actually sell in my area?"</div>
-      <div class="fq-a">That is why we ask about your daily foot traffic. With 30 to 50 visitors per day, the numbers work even in the most conservative scenario. We only approve partners where we are confident the concept will succeed.</div>
-    </div>
-    <div class="fq" onclick="this.classList.toggle('open')">
-      <div class="fq-q">"I don't have extra space."</div>
-      <div class="fq-a">The Perfume Bar is designed for compact premium spaces. It fits in a strategic corner near checkout. The footprint is small but the impact is immediate.</div>
-    </div>
-    <div class="fq" onclick="this.classList.toggle('open')">
-      <div class="fq-q">"My staff aren't trained in fragrance."</div>
-      <div class="fq-a">This is not a training-heavy concept. The entire sales mechanism is: offer visitors to try 2-3 fragrances on skin. That takes 30 seconds. The scent does the selling. We also provide simple product guidance.</div>
-    </div>
-    <div class="fq" onclick="this.classList.toggle('open')">
-      <div class="fq-q">"What if a competitor gets it near me?"</div>
-      <div class="fq-a">Territory matters. That is exactly why partners secure their territory with a deposit. We limit one partner per area to protect your competitive advantage and brand exclusivity.</div>
-    </div>
-    <div class="fq" onclick="this.classList.toggle('open')">
-      <div class="fq-q">"Can I pay in parts?"</div>
-      <div class="fq-a">Yes. You can reserve with a deposit today, which secures your unit and your territory. The remaining balance is completed before shipment. The key is securing your position while availability lasts.</div>
-    </div>
-    <div class="fq" onclick="this.classList.toggle('open')">
-      <div class="fq-q">"Can I start smaller?"</div>
-      <div class="fq-a">Absolutely. The Rookies package at £1,500 gives you 20 bestselling fragrances plus all testers. Start selling, see results, and scale from profits. Most partners who start small upgrade within 30 days.</div>
-    </div>
-  </div>
-</section>
-
-<!-- BOOKING FORM -->
-<section class="form-sec" id="book">
-  <div class="form-w">
-    <div class="s-rule" style="margin:0 auto 14px"></div>
-    <h2 style="text-align:center">Book Your <i>Discovery Call</i></h2>
-    <p class="form-sub">See the products live. Get your profit projection. No obligations.</p>
-    <p class="form-urgency">Only 12 Perfume Bar units remaining from current batch</p>
-    <div class="fg">
-      <div><label>Your Name *</label><input type="text" placeholder="Full name"></div>
-      <div><label>Business Name *</label><input type="text" placeholder="Store or company name"></div>
-      <div><label>Email *</label><input type="email" placeholder="business@email.com"></div>
-      <div><label>Phone / WhatsApp *</label><input type="tel" placeholder="+44 ..."></div>
-      <div><label>City &amp; Country *</label><input type="text" placeholder="e.g. London, UK"></div>
-      <div><label>Business Type *</label>
-        <select><option value="" disabled selected>Select type</option><option>Boutique / Fashion Store</option><option>Luxury Hotel / Resort</option><option>Hair Salon / Barber</option><option>Spa / Beauty</option><option>Concept Store</option><option>Department Store</option><option>Other</option></select>
-      </div>
-      <div><label>Daily Foot Traffic (approx)</label>
-        <select><option value="" disabled selected>How many visitors/day?</option><option>Under 30</option><option>30 - 50</option><option>50 - 100</option><option>100 - 300</option><option>300+</option></select>
-      </div>
-      <div><label>Investment Level</label>
-        <select><option value="" disabled selected>Which package interests you?</option><option>Rookies Start (£1,500)</option><option>Perfume Bar (£8,000)</option><option>Flagship Partner (£30,000)</option><option>Not sure yet - need guidance</option></select>
-      </div>
-      <div class="fg-full">
-        <button class="f-btn" id="sb" onclick="document.getElementById('sb').textContent='CALL BOOKED - WE WILL CONTACT YOU WITHIN 24 HOURS';document.getElementById('sb').classList.add('done')">Book My Discovery Call</button>
-        <p class="f-note">We respond within 24 hours. Your information is confidential.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="sec-cta" style="padding:32px 20px;background:var(--bg)">
+  <a href="#top-form">Secure Your Territory Now</a>
+  <p>Book a 10-minute video call. See the products live. No obligation.</p>
+</div>
 
 <footer class="foot">
   <div class="foot-logo">CARLO DALI</div>
   <div class="foot-cities">LONDON &bull; ATHENS &bull; MYKONOS &bull; NEW YORK &bull; DUBAI</div>
   <div class="foot-links">
-    <a href="https://carlodali.com" target="_blank">Website</a>
-    <a href="https://corporate.carlodali.com" target="_blank">Corporate</a>
-    <a href="https://instagram.com/carlodalilondonofficial" target="_blank">Instagram</a>
+    <a href="https://carlodali.com">Website</a>
+    <a href="https://corporate.carlodali.com">Corporate</a>
+    <a href="https://instagram.com/carlodalilondonofficial">Instagram</a>
   </div>
-  <div class="foot-copy">&copy; 2026 CARLO DALI LTD, London. All rights reserved.</div>
+  <div class="foot-copy">&copy; 2026 CARLO DALI LTD, London.</div>
 </footer>
 
+<script>
+function submitForm(btn){btn.textContent='BOOKED - WE WILL CALL YOU WITHIN 24H';btn.classList.add('done');btn.disabled=true}
+</script>
 </body>
 </html>
